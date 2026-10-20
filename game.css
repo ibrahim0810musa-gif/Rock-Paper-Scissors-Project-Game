@@ -1,0 +1,213 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #171d35;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+header {
+  max-width: 720px;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+
+header p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.game-card {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #222b49;
+  border: 1px solid #3d496b;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 21px;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+button {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #5269e8;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #3d50c4;
+}
+
+button:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+
+.choices-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.choice-box {
+  min-width: 0;
+  padding: 15px 8px;
+  background-color: #171d35;
+  border: 1px solid #3d496b;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+.choice-box p {
+  margin: 0 0 12px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.choice-box span {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#result {
+  min-height: 48px;
+  margin: 20px 0;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 15px 10px;
+  background-color: #171d35;
+  border-radius: 10px;
+}
+
+.scoreboard p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.game-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+#reset-button {
+  background-color: #e05d5d;
+}
+
+#reset-button:hover {
+  background-color: #c74343;
+}
+
+#clear-history {
+  background-color: #64748b;
+}
+
+#clear-history:hover {
+  background-color: #475569;
+}
+
+.history-section {
+  margin-top: 28px;
+  text-align: left;
+}
+
+.history-section h2 {
+  text-align: center;
+}
+
+#history-list {
+  padding-left: 22px;
+}
+
+#history-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #171d35;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+#history-list li.win {
+  border-left: 4px solid #4ade80;
+}
+
+#history-list li.loss {
+  border-left: 4px solid #f87171;
+}
+
+#history-list li.draw {
+  border-left: 4px solid #94a3b8;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 14px;
+  }
+
+  .game-card {
+    padding: 18px 14px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .choices {
+    gap: 8px;
+  }
+
+  button {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
+  .choice-box span {
+    font-size: 15px;
+  }
+}
